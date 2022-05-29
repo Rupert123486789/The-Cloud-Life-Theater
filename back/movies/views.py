@@ -16,7 +16,7 @@ from django.db.models import Count
 
 from datetime import datetime
 import random
-from .crawling import now_altitude, lat, lng, address
+# from .crawling import now_altitude, lat, lng, address
 
 
 User = get_user_model()
