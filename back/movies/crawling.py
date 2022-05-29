@@ -57,15 +57,17 @@ for key1,value1 in full_address.items():
                         ad4 = value2
                 address = f'{ad1}+{ad2}+{ad3}+{ad4}'
                 break
-
-
+address = '1'
 # 크롤링
-chrome_driver_path = 'movies/chromedriver.exe'
+# chrome_driver_path = 'movies/chromedriver.exe'
 # chrome_driver_path = os.environ.get("CHROMEDRIVER_PATH")
 options = webdriver.ChromeOptions()
+options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+print(os.environ.get("CHROMEDRIVER_PATH"))
 options.add_argument('--headless')
+options.add_argument("--disable-dev-shm-usage")
 options.add_experimental_option('excludeSwitches', ['enable-logging'])
-driver = webdriver.Chrome(options=options, executable_path=chrome_driver_path)
+driver = webdriver.Chrome(options=options, executable_path=os.environ.get("CHROMEDRIVER_PATH"))
 
 # 일출*일몰 시간 받기
 url_c = 'https://astro.kasi.re.kr/life/pageView/9'
@@ -99,4 +101,4 @@ if int(hour) < int(sun_rise[:2]) or int(hour) > int(sun_set[:2]):
 
 
 now_altitude = str(altitude)
-# print(now_altitude)
+print(now_altitude)
