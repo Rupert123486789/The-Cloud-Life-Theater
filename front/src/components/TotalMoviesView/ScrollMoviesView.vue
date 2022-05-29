@@ -91,15 +91,19 @@ export default {
       // console.log('window.innerHeight',window.innerHeight)
       // console.log('document.body.offsetHeight',document.body.offsetHeight)
       //console.log(window.scrollY + window.innerHeight >= document.body.offsetHeight)
+      this.isEnd = false
       if (this.limit <= this.movies.length){
-        this.isEnd = false
         if(window.scrollY + window.innerHeight >= document.body.offsetHeight){
+          //console.log('여기')
+          this.isEnd = false
           this.isLoding = true
           setTimeout(() => {
             this.limit += 5
             this.isLoading = false
+            this.isEnd = true
           },300)
         }
+        console.log('여기2')
       }else{
         this.isLoding = false
         this.isEnd = true

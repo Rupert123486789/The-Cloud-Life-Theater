@@ -427,7 +427,7 @@ export default {
     //this.$store.dispatch('fetchProfile')
   },
   mounted(){
-    // console.log('여기는 마운티드',this.getLikedTendency.data)
+    //console.log('여기는 마운티드',this.getLikedTendency.data)
     this.fillData(this.getLikedTendency.data);
     this.$store.dispatch('fetchFollowingsInfo',this.getProfile.username)
   },

@@ -31,7 +31,7 @@ export default {
   },
   actions: {
     fetchAllComments({commit,getters},review_id){
-      console.log('지금읽은 글번호: ' + review_id)
+      //console.log('지금읽은 글번호: ' + review_id)
       //axios통신 후 댓글들 state 집어넣는다.
       const URL = drf.review.getReviewComment(review_id)
       axios({

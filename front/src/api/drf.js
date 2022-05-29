@@ -1,4 +1,5 @@
-const HOST = 'http://localhost:8000/api/v1/'
+//const HOST = 'http://localhost:8000/api/v1/'
+const HOST = 'https://baehongdong.herokuapp.com/api/v1/'
 
 const ACCOUNTS = 'accounts/'
 const MOVIES = 'movies/'

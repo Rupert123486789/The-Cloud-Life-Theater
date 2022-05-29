@@ -20,8 +20,8 @@ class Genre(models.Model):
 
 
 class Movie(models.Model):    
-    title = models.CharField(max_length=100)
-    overview = models.CharField(max_length=300)
+    title = models.CharField(max_length=200)
+    overview = models.CharField(max_length=1000)
     release_date = models.CharField(max_length=100)
     popularity = models.FloatField()
     vote_average = models.FloatField()
