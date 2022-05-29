@@ -42,22 +42,21 @@ def get_address(lat, lng):
 full_address = get_address(lat, lng)
 custom_document = 'documents'
 address = ''
-for key1,value1 in full_address.items():
-    if key1 == 'documents':
-        for key3,value3 in value1[0].items():
-            if key3 == 'address':
-                for key2,value2 in value3.items():
-                    if key2 == 'region_1depth_name':
-                        ad1 = value2
-                    elif key2 == 'region_2depth_name':
-                        ad2 = value2
-                    elif key2 == 'region_3depth_name':
-                        ad3 = value2
-                    elif key2 == 'region_4depth_name':
-                        ad4 = value2
-                address = f'{ad1}+{ad2}+{ad3}+{ad4}'
-                break
-address = '1'
+cnt = 0
+lst = []
+for key,value in full_address.items():
+    lst.append(value)
+
+# print(lst[1])
+for i in lst[1]:
+    ad1 = i['region_1depth_name']
+    ad2 = i['region_2depth_name']
+    ad3 = i['region_3depth_name']
+    ad4 = i['region_4depth_name']
+    address = f'{ad1}+{ad2}+{ad3}+{ad4}'
+    break             
+# print(address)
+
 # 크롤링
 # chrome_driver_path = 'movies/chromedriver.exe'
 chrome_driver_path = os.environ.get("CHROMEDRIVER_PATH")
