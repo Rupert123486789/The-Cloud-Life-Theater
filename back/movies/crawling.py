@@ -61,7 +61,7 @@ for key1,value1 in full_address.items():
 
 # 크롤링
 chrome_driver_path = 'movies/chromedriver.exe'
-chrome_driver_path = os.environ.get("CHROMEDRIVER_PATH")
+# chrome_driver_path = os.environ.get("CHROMEDRIVER_PATH")
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')
 options.add_experimental_option('excludeSwitches', ['enable-logging'])
