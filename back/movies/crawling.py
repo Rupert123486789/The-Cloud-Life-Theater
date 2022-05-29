@@ -50,6 +50,7 @@ for key,value in full_address.items():
 # print(lst[1])
 for i in lst[1]:
     ad1 = i['region_1depth_name']
+    print(ad1)
     ad2 = i['region_2depth_name']
     ad3 = i['region_3depth_name']
     ad4 = i['region_4depth_name']
@@ -98,4 +99,4 @@ if int(hour) < int(sun_rise[:2]) or int(hour) > int(sun_set[:2]):
 
 
 now_altitude = str(altitude)
-print(now_altitude)
+# print(now_altitude)
